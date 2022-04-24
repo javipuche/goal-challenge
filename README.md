@@ -4,4 +4,3 @@
 - Install dependencies `npm install`
 - Run preview `npm start`
 - Run development `npm run dev`
-- Run test `npm test`
