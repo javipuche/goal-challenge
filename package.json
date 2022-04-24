@@ -1,0 +1,156 @@
+{
+  "name": "my-vue-app",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite build && vite preview",
+    "test": "vite build && vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.14",
+    "pinia": "^2.0.13",
+    "pinia-plugin-persistedstate": "^1.5.1",
+    "vue-i18n": "^9.1.9"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "eslint-plugin-vue": "^8.7.1",
+    "sass": "^1.50.1",
+    "standard": "^17.0.0",
+    "stylelint": "^14.7.1",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "vite": "^2.9.5"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "vue/setup-compiler-macros": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/vue3-recommended"
+    ],
+    "rules": {
+      "vue/multi-word-component-names": "off",
+      "vue/require-default-prop": "off",
+      "template-curly-spacing": [
+        "off"
+      ],
+      "indent": [
+        "error",
+        4
+      ],
+      "semi": [
+        "error",
+        "never"
+      ],
+      "vue/singleline-html-element-content-newline": [
+        "error",
+        {
+          "ignoreWhenNoAttributes": true,
+          "ignoreWhenEmpty": true,
+          "ignores": [
+            "router-link"
+          ]
+        }
+      ],
+      "vue/html-indent": [
+        "error",
+        4,
+        {
+          "attribute": 1,
+          "baseIndent": 1,
+          "closeBracket": 0,
+          "alignAttributesVertically": true
+        }
+      ],
+      "vue/script-indent": [
+        "error",
+        4,
+        {
+          "baseIndent": 1
+        }
+      ],
+      "vue/html-self-closing": [
+        "error",
+        {
+          "html": {
+            "void": "never",
+            "normal": "any",
+            "component": "always"
+          }
+        }
+      ],
+      "vue/max-attributes-per-line": [
+        "error",
+        {
+          "singleline": 4,
+          "multiline": {
+            "max": 1
+          }
+        }
+      ],
+      "vue/no-v-html": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.vue"
+        ],
+        "rules": {
+          "indent": "off"
+        }
+      }
+    ]
+  },
+  "stylelint": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "stylelint-config-standard-scss",
+      "stylelint-config-recommended-vue/scss"
+    ],
+    "ignoreFiles": [
+      "**/*.js"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.vue",
+          "**/*.vue"
+        ],
+        "rules": {
+          "at-rule-no-unknown": [
+            true,
+            {
+              "ignoreAtRules": [
+                "at-root"
+              ]
+            }
+          ],
+          "no-descending-specificity": null,
+          "indentation": [
+            2,
+            {
+              "baseIndentLevel": 1
+            }
+          ],
+          "length-zero-no-unit": [
+            true,
+            {
+              "ignore": [
+                "custom-properties"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
